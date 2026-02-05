@@ -1,0 +1,153 @@
+[
+  {
+    "id": "3hop1__32498_4658_820357",
+    "paragraphs": [
+      {
+        "idx": 0,
+        "title": "Gap penalty",
+        "paragraph_text": "a Gap penalty is a method of scoring alignments of two or more sequences. When aligning sequences, introducing a gaps in the sequences can allow an alignment algorithm to match more terms than a gap-less alignment can. However, minimizing gaps in an alignment is important to create a useful alignment. Too many gaps can cause an alignment to become meaningless. Gap penalties are used to adjust alignment scores based on the number and length of gaps. The five main types of gap penalties are constant, linear, affine, convex, and Profile - based.",
+        "is_supporting": false
+      },
+      {
+        "idx": 1,
+        "title": "Party leaders of the United States House of Representatives",
+        "paragraph_text": "Traditionally, the Speaker is reckoned as the leader of the majority party in the House, with the Majority Leader as second - in - command. For instance, when the Republicans gained the majority in the House after the 2010 elections, Eric Cantor succeeded Boehner as Majority Leader. Despite this, Cantor and his successor, Kevin McCarthy, have been reckoned as the second - ranking Republicans in the House, since Boehner is still reckoned as the leader of the House Republicans. However, there have been some exceptions. The most recent exception to this rule came when Majority Leader Tom DeLay generally overshadowed Speaker Dennis Hastert from 2003 to 2006. In contrast, the Minority Leader is the undisputed leader of the minority party.",
+        "is_supporting": false
+      },
+      {
+        "idx": 2,
+        "title": "Walter von Hippel",
+        "paragraph_text": "Generalleutnant Walter von Hippel (Luftwaffe) (27 May 1897 \u2013 29 November 1972) was a general in the Luftwaffe of Nazi Germany during World War II who commanded several flak divisions. He was also a recipient of the Knight's Cross of the Iron Cross.",
+        "is_supporting": false
+      },
+      {
+        "idx": 3,
+        "title": "Erich Hohagen",
+        "paragraph_text": "Erich Hohagen (9 January 1915 \u2013 8 March 1990) was a German general in the Bundeswehr. During World War II, he served in the Luftwaffe and was a recipient of the Knight's Cross of the Iron Cross of Nazi Germany.",
+        "is_supporting": false
+      },
+      {
+        "idx": 4,
+        "title": "Josef Kociok",
+        "paragraph_text": "Josef Kociok (26 April 1918 \u2013 26 September 1943) was a German Luftwaffe pilot during World War II and a recipient of the Knight's Cross of the Iron Cross of Nazi Germany. He was killed in an air collision.",
+        "is_supporting": false
+      },
+      {
+        "idx": 5,
+        "title": "LaserDisc",
+        "paragraph_text": "In addition, LaserDisc videos sometimes exhibit a problem known as \"crosstalk\". The issue can arise when the laser optical pickup assembly within the player is out of alignment or because the disc is damaged or excessively warped, but it could also occur even with a properly functioning player and a factory-new disc, depending on electrical and mechanical alignment problems. In these instances, the issue arose due to the fact that CLV discs require subtle changes in rotating speed at various points during playback. During a change in speed, the optical pickup inside the player might read video information from a track adjacent to the intended one, causing data from the two tracks to \"cross\"; the extra video information picked up from that second track shows up as distortion in the picture which looks reminiscent of swirling \"barber poles\" or rolling lines of static.",
+        "is_supporting": false
+      },
+      {
+        "idx": 6,
+        "title": "Computational complexity theory",
+        "paragraph_text": "To further highlight the difference between a problem and an instance, consider the following instance of the decision version of the traveling salesman problem: Is there a route of at most 2000 kilometres passing through all of Germany's 15 largest cities? The quantitative answer to this particular problem instance is of little use for solving other instances of the problem, such as asking for a round trip through all sites in Milan whose total length is at most 10 km. For this reason, complexity theory addresses computational problems and not particular problem instances.",
+        "is_supporting": false
+      },
+      {
+        "idx": 7,
+        "title": "Strategic bombing during World War II",
+        "paragraph_text": "Strategic bombing during World War II began on 1 September 1939 when Germany invaded Poland and the Luftwaffe (German Air Force) began bombing cities and the civilian population in Poland in an indiscriminate aerial bombardment campaign. As the war continued to expand, bombing by both the Axis and the Allies increased significantly. The RAF began bombing Germany in March 1940. In September 1940, the Luftwaffe began targeting British cities in 'The Blitz'. After the beginning of Operation Barbarossa in June 1941, the Luftwaffe attacked Soviet cities and infrastructure. From 1942 onward, the British bombing campaign against Germany became less restrictive and increasingly targeted industrial sites and eventually, civilian areas. When the United States began flying bombing missions against Germany, it reinforced these efforts and controversial firebombings were carried out against Hamburg (1943), Dresden (1945), and other German cities.",
+        "is_supporting": false
+      },
+      {
+        "idx": 8,
+        "title": "Hans-Georg von der Osten",
+        "paragraph_text": "Leutnant Hans-Georg von der Osten began his career as a World War I flying ace credited with five aerial victories. He later rose to command of all Luftwaffe bases in Germany, during World War II.",
+        "is_supporting": false
+      },
+      {
+        "idx": 9,
+        "title": "The Blitz",
+        "paragraph_text": "Within the Luftwaffe, there was a more muted view of strategic bombing. The OKL did not oppose the strategic bombardment of enemy industries and or cities, and believed it could greatly affect the balance of power on the battlefield in Germany's favour by disrupting production and damaging civilian morale, but they did not believe that air power alone could be decisive. Contrary to popular belief, the Luftwaffe did not have a systematic policy of what became known as \"terror bombing\". Evidence suggests that the Luftwaffe did not adopt an official bombing policy in which civilians became the primary target until 1942.",
+        "is_supporting": false
+      },
+      {
+        "idx": 10,
+        "title": "Rudolf Bogatsch",
+        "paragraph_text": "Rudolf Bogatsch (4 September 1891 \u2013 5 June 1970) was a general in the Luftwaffe of Nazi Germany during World War II who commanded the IV. Flakkorps. He was a recipient of the Knight's Cross of the Iron Cross.",
+        "is_supporting": false
+      },
+      {
+        "idx": 11,
+        "title": "Videotelephony",
+        "paragraph_text": "VRS services have become well developed nationally in Sweden since 1997 and also in the United States since the first decade of the 2000s. With the exception of Sweden, VRS has been provided in Europe for only a few years since the mid-2000s, and as of 2010 has not been made available in many European Union countries, with most European countries still lacking the legislation or the financing for large-scale VRS services, and to provide the necessary telecommunication equipment to deaf users. Germany and the Nordic countries are among the other leaders in Europe, while the United States is another world leader in the provisioning of VRS services.",
+        "is_supporting": false
+      },
+      {
+        "idx": 12,
+        "title": "Hans Modrow",
+        "paragraph_text": "Hans Modrow (; born 27 January 1928) is a German left-wing politician, best known as the last communist premier of East Germany and the country's \"de facto\" leader from 1989 to 1990. He was convicted of electoral fraud by the Dresden District Court in 1995. He is currently the honorary Chairman of the Left Party.",
+        "is_supporting": false
+      },
+      {
+        "idx": 13,
+        "title": "Modern history",
+        "paragraph_text": "The Soviet Union created the Eastern Bloc of countries that it occupied, annexing some as Soviet Socialist Republics and maintaining others as satellite states that would later form the Warsaw Pact. The United States and various western European countries began a policy of \"containment\" of communism and forged myriad alliances to this end, including NATO. Several of these western countries also coordinated efforts regarding the rebuilding of western Europe, including western Germany, which the Soviets opposed. In other regions of the world, such as Latin America and Southeast Asia, the Soviet Union fostered communist revolutionary movements, which the United States and many of its allies opposed and, in some cases, attempted to \"roll back\". Many countries were prompted to align themselves with the nations that would later form either NATO or the Warsaw Pact, though other movements would also emerge.",
+        "is_supporting": false
+      },
+      {
+        "idx": 14,
+        "title": "Walter Grabmann",
+        "paragraph_text": "Walter Grabmann (20 September 1905 \u2013 20 August 1992) was a German general in the Luftwaffe during World War II. He was also a recipient of the Knight's Cross of the Iron Cross of Nazi Germany. Grabmann was credited with 7 aerial victories during the Spanish Civil War claimed in 137 combat missions.",
+        "is_supporting": false
+      },
+      {
+        "idx": 15,
+        "title": "16th Summit of the Non-Aligned Movement",
+        "paragraph_text": "The summit consisted of two preceding events: a ``Senior Officials Meeting ''on 26 and 27 August 2012, and a`` Ministerial Meeting'' on 28 and 29 August 2012. The leaders summit took place on 30 and 31 August. Egyptian President Mohammad Morsi officially handed the presidency of the Non-Aligned Movement (NAM) to Iranian President Mahmoud Ahmadinejad, during the inaugural ceremony of Leaders' Meeting. Iran will hold the NAM presidency for four years until the 17th summit in Venezuela in 2016.",
+        "is_supporting": false
+      },
+      {
+        "idx": 16,
+        "title": "G\u00fcnther Sachs",
+        "paragraph_text": "G\u00fcnther Sachs (4 May 1903 \u2013 15 July 1962) was a general in the Luftwaffe of Nazi Germany during World War II who commanded the 18th Flak Division. He was a recipient of the Knight's Cross of the Iron Cross.",
+        "is_supporting": false
+      },
+      {
+        "idx": 17,
+        "title": "Francovich v Italy",
+        "paragraph_text": "Francovich v Italy (1991) C-6/90 was a decision of the European Court of Justice which established that European Union member states could be liable to pay compensation to individuals who suffered a loss by reason of the member state's failure to transpose an EU directive into national law. This principle is sometimes known as the principle of state liability or \"the rule in \"Francovich\"\" in European Union law.",
+        "is_supporting": true
+      },
+      {
+        "idx": 18,
+        "title": "Bernhard Woldenga",
+        "paragraph_text": "Bernhard Woldenga (4 December 1901 \u2013 19 January 1999) was a German pilot during World War II. He served in the Luftwaffe, commanding the JG 27 and JG 77 fighter wings. Woldenga was a recipient of the Knight's Cross of the Iron Cross of Nazi Germany.",
+        "is_supporting": false
+      },
+      {
+        "idx": 19,
+        "title": "Walter Gericke",
+        "paragraph_text": "Walter Gericke (23 December 1907 \u2013 19 October 1991), was a German paratroop officer in the Luftwaffe of Nazi Germany during World War II and a general in the Bundeswehr of West Germany. He was a recipient of the Knight's Cross of the Iron Cross with Oak Leaves.",
+        "is_supporting": false
+      }
+    ],
+    "question": "The leader of the Luftwaffe aligned with Germany with a country that is what constituent of a supranational organisation?",
+    "question_decomposition": [
+      {
+        "id": 32498,
+        "question": "Who was the leader of the Luftwaffe?",
+        "answer": "Hitler",
+        "paragraph_support_idx": null
+      },
+      {
+        "id": 4658,
+        "question": "Which country did #1 align Germany with?",
+        "answer": "Italy",
+        "paragraph_support_idx": null
+      },
+      {
+        "id": 820357,
+        "question": "#2 >> instance of",
+        "answer": "European Union member state",
+        "paragraph_support_idx": 17
+      }
+    ],
+    "answer": "European Union member state",
+    "answer_aliases": [
+      "European Union"
+    ],
+    "answerable": false
+  }
+]
