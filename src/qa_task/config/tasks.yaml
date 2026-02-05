@@ -1,0 +1,149 @@
+retrieve_paragraphs_task:
+  description: >
+    Analyze the main question: "{question}"
+    
+    And the sub-questions that need to be answered:
+    {question_decomposition}
+    
+    Your task is to identify key entities and concepts from these questions and 
+    use the Paragraph Retrieval Tool to find relevant paragraphs that can help 
+    answer each sub-question.
+    
+    For each sub-question, search for relevant paragraphs and note which paragraphs 
+    might be useful for answering it.
+  expected_output: >
+    A structured list of relevant paragraphs for each sub-question, with explanations 
+    of why each paragraph is relevant.
+  agent: paragraph_retriever
+
+answer_subquestions_task:
+  description: >
+    Based on the retrieved paragraphs AND the knowledge graph triples, answer each of the following sub-questions in order:
+    {question_decomposition}
+    
+    Important notes:
+    - You MUST use BOTH paragraph information AND knowledge graph triples to answer each sub-question
+    - Use the Paragraph Retrieval Tool to access relevant paragraphs
+    - Use the Knowledge Graph File Reader tool to access knowledge graph triples
+    - Some sub-questions may reference answers from previous sub-questions (e.g., "#1" refers to the answer from the first sub-question)
+    - Answer each sub-question carefully using BOTH sources of information
+    - Build upon previous answers when necessary
+    - Be explicit about your reasoning and cite both paragraph sources and KG triple IDs
+    
+    Main question for context: "{question}"
+  expected_output: >
+    A detailed answer for each sub-question, with clear reasoning and references to 
+    BOTH the paragraphs used AND the knowledge graph triples used. Each answer should be 
+    numbered and clearly stated with evidence from both sources.
+  agent: question_answerer
+
+generate_final_answer_task:
+  description: >
+    Based on all the sub-question answers (from both paragraph-based and KG-based analysis), 
+    provide the final answer to the main question:
+    "{question}"
+    
+    You MUST:
+    - Review all the intermediate answers from answer_subquestions_task
+    - Review the KG-only answer from answering_task
+    - Use the Knowledge Graph File Reader to access KG triples for verification
+    - Synthesize information from BOTH sources into a single, accurate answer
+    
+    The answer should directly address the main question and be well-supported by evidence 
+    from both paragraphs and knowledge graph.
+  expected_output: >
+    A concise final answer to the main question. The answer should be just the 
+    direct answer (e.g., a year, a name, a number) without unnecessary elaboration, 
+    but with brief mention of supporting evidence from both sources.
+  agent: final_answer_generator
+
+knowledge_graph_task:
+  description: >
+    You are given multiple paragraphs and a multi-hop question decomposition.
+    
+    Your job is to construct a question-driven knowledge graph for answering.
+
+    HARD CONSTRAINTS:
+    1) Output MUST be raw JSON only. No markdown. No code fences. No extra text.
+    2) You MUST organize extraction by decomposed questions. Each step must have its own subgraph.
+    3) Every triple MUST include evidence and provenance (source paragraph index).
+    4) Prefer extracting "bridge" facts that connect step i output to step i+1 input.
+    5) Do NOT dump all facts. Extract only facts that are plausibly needed to answer.
+    6) In decomposed questions, tokens like "#1", "#2" refer to the answer of the earlier step.
+
+    INPUTS:
+    - Paragraphs: {paragraphs}
+    - Decomposed Questions: {decomposed_questions}
+
+    OUTPUT JSON SCHEMA (STRICT):
+    - Output MUST be a single JSON array.
+    - Each item MUST be an object with EXACTLY these keys:
+      ["step_id","subject","relation","object","source_id","evidence"]
+    - Do NOT output any other top-level keys (no "steps", no "schema_version", no "target", no "notes").
+
+    OUTPUT JSON SCHEMA (STRICT):
+    {{"kg":[
+      {{"step_id":1,"subject":"...","relation":"...","object":"...","source_id":0,"evidence":"..."}}
+    ]}}
+
+    RELATION RULES:
+    - Use ONLY relations from relation_inventory when possible.
+    - If none fit, use: "has_attribute" (for descriptive facts) or "related_to" as last resort.
+    - Keep relation names lowercase snake_case.
+
+    NORMALIZATION RULES:
+    - subject_norm/object_norm should be a simple canonical form:
+      * trim spaces, remove surrounding quotes
+      * keep original capitalization if it's a proper noun; otherwise lowercase
+      * expand obvious aliases if stated (e.g., "X (also known as Y)" -> alternate_name_of)
+    - If you cannot normalize, copy the original into *_norm.
+
+    EVIDENCE RULES:
+    - evidence MUST be a short verbatim snippet (ideally one clause/sentence) from the source paragraph.
+    - source_id MUST be the paragraph index (0-based).
+
+    COVERAGE REQUIREMENTS (IMPORTANT):
+    - For EACH decomposed step, extract at least:
+      * 2-6 high-value triples that directly help answer that step
+      * 1-3 bridge triples that connect to other steps when applicable
+    - If a step cannot be supported by any paragraph, still include the step with empty triples and a note explaining why.
+
+  expected_output: >
+    A single valid JSON object following the schema above.
+  agent: knowledge_graph_agent
+
+
+answering_task:
+  description: >
+    You MUST answer using ONLY the provided knowledge graph JSON (no outside knowledge).
+    If evidence is insufficient, say "Insufficient evidence" and explain which step failed.
+
+    INPUTS:
+    - Knowledge Graph JSON (file path): {knowledge_graph_triples}
+    - Original Question: {questions}
+    - Decomposed Questions: {decomposed_questions}
+
+    PROCEDURE:
+    0) You MUST call the "Knowledge Graph File Reader" tool to load knowledge_graph.json.
+       (Answering without calling the tool will be considered a failure)
+    1) For each decomposed step in order:
+       - Identify supporting triples (by id)
+       - Produce an intermediate answer
+       - If multiple candidates, choose the best supported one and mention ambiguity briefly
+       - Resolve references like "#1", "#2" to earlier step answers
+    2) Use the intermediate answer(s) to derive the final answer.
+    3) Cite triple ids used for each step and for the final answer.
+
+    OUTPUT FORMAT (STRICT, but plain text is OK):
+    - Step 1: <intermediate answer> | evidence: [t0001, t0007]
+    - Step 2: <intermediate answer> | evidence: [t0012]
+    ...
+    - Final: <final answer> | evidence: [t0012, t0040]
+
+    RULES:
+    - Never use paragraph text directly; only use triples and their evidence fields.
+    - If a needed relation is missing, do not guess.
+
+  expected_output: >
+    Step-by-step intermediate answers and a final answer with cited triple ids.
+  agent: answering_agent
