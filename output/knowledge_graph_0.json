@@ -1,0 +1,28 @@
+{
+  "kg": [
+    {
+      "step_id": 1,
+      "subject": "Crazy Little Thing Called Love",
+      "relation": "written_by",
+      "object": "Freddie Mercury",
+      "source_id": 0,
+      "evidence": "The writer of 'Crazy Little Thing Called Love' is Freddie Mercury."
+    },
+    {
+      "step_id": 1,
+      "subject": "Freddie Mercury",
+      "relation": "has_attribute",
+      "object": "lead singer of Queen",
+      "source_id": 0,
+      "evidence": "Freddie Mercury, the lead singer of Queen."
+    },
+    {
+      "step_id": 2,
+      "subject": "Freddie Mercury",
+      "relation": "died_in",
+      "object": "1991",
+      "source_id": 0,
+      "evidence": "Freddie Mercury died in 1991."
+    }
+  ]
+}

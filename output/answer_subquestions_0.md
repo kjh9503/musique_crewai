@@ -1,0 +1,1 @@
+The writer of "Crazy Little Thing Called Love" is Freddie Mercury, and he died in 1991.
