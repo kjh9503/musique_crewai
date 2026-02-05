@@ -12,6 +12,6 @@ This repository provides a CrewAI-based pipeline for running and evaluating expe
 2. Run `./run_all.sh`.
 
 3. Check the generated result files in the `output` directory  
-   (`answer_x.md`, `answer_kg_x.md`, `answer_subquestions_x.md`).
+   (`answer_x.md`, `answer_kg_x.md`, `answer_subquestions_x.md`, `knowledge_graph_x.md`).
 
 4. Evaluate the results using `./eval_answers.py`.
