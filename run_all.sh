@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd /home/musique_crewai
+cd /home/qa_task
 
 KG_MODE="${KG_MODE:-merge}"
 
